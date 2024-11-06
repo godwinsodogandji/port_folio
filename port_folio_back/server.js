@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors"); // Importer le middleware CORS
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -15,6 +16,7 @@ mongoose
   .catch((err) => console.error("Erreur de connexion à MongoDB: ", err));
 
 // Middleware
+app.use(cors()); // Ajouter le middleware CORS
 app.use(express.json());
 
 // Modèle Projet
