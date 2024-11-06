@@ -8,8 +8,7 @@ import VideoComponent from './components/VideoComponent.vue';
   <header>
   
   </header>
-  <VideoComponent></VideoComponent>
-  <!-- <ProjetDétailsCompenent/> -->
+ 
   
 
   <RouterView />

@@ -1,20 +1,25 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../views/Apropos.vue';
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/apropos',
-      name: 'Apropos',
-      component: Apropos
+      path: '/about',
+      name: 'about',
+      component: () => import('../views/Apropos.vue')
     },
-    
     {
-      path: '/',
-      name: 'HelloWorld',
-      component: () => import('../components/HelloWorld.vue') 
+      path: '/videos',
+      name: 'videos',
+      component: () => import('../components/VideoComponent.vue')
     },
-    
+    {
+      path: '/projets',
+      name: 'projets',
+      component: () => import('../components/Projets.vue')
+    }
+
+
+
   ],
 })
 
