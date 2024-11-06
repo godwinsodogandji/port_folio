@@ -17,7 +17,7 @@
       <div class="text-center lg:text-left max-w-md">
         <p class="text-lg">Hello,</p>
         <h2 class="text-3xl font-semibold text-gray-700">This is <span class="text-blue-500 font-bold">Richard C. Sanders</span></h2>
-        <p class="text-lg text-gray-600 mt-2">Top-rated digital marketing analyst in America</p>
+        <p class="text-lg text-gray-600 mt-2">Top-rated digitale marketing analyst in America</p>
         <div class="flex justify-center lg:justify-start space-x-4 mt-4 text-sm text-gray-600">
           <span class="px-2 py-1 bg-blue-100 rounded-full">Trusted</span>
           <span class="px-2 py-1 bg-blue-100 rounded-full">Result Oriented</span>
