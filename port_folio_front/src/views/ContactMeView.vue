@@ -46,13 +46,13 @@
         <!-- Image Section -->
         <div class="w-full md:w-1/2 p-4 flex justify-center animate-fadeInRight">
           <img alt="" class="rounded-lg shadow-lg" height="200"
-            src="../assets/img/copy-space-clipboard-with-violet-leaves.jpg" width="300" />
+            src="../assets/img/copy-space-laptop-virtual-reality-headset.jpg" width="300" />
         </div>
       </div>
 
       <!-- Other Accounts Section -->
-      <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center animate-fadeIn">
-        <p class="text-gray-800 font-bold">Autres comptes</p>
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center animate-fadeIn">
+        <p class="text-gray-800 font-bold " style="margin-left: 20rem;">Autres comptes</p>
         <i class="fas fa-plus-circle text-green-500 animate-pulse"></i>
       </div>
     </div>
@@ -61,7 +61,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import imgContact from '../assets/img/copy-space-clipboard-with-violet-leaves.jpg';
+import imgContact from '../assets/img/copy-space-laptop-virtual-reality-headset.jpg';
 
 const form = ref({
   name: '',
