@@ -52,8 +52,8 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
 import axios from 'axios';
+import { onMounted, ref } from 'vue';
 
 const videos = ref([]);
 const showNumber = ref(null);
