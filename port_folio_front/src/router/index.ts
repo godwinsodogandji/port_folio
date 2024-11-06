@@ -9,11 +9,11 @@ const router = createRouter({
       component: Apropos
     },
     
-    // {
-    //   path: '/',
-    //   name: 'HelloWorld',
-    //   component: () => import('') ,
-    // },
+    {
+      path: '/',
+      name: 'HelloWorld',
+      component: () => import('../components/HelloWorld.vue') 
+    },
     
   ],
 })
