@@ -1,13 +1,21 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router';
+import HomeView from './views/HomeView.vue';
 </script>
 
 <template>
-  <header>
+ 
   
-  </header>
+  <!-- </header>
+  <VideoComponent></VideoComponent> -->
+  <!-- <ProjetDétailsCompenent/> -->
+
+<HomeView></HomeView>
+  
+  
 
   <RouterView />
+
 </template>
 
 <style scoped>
