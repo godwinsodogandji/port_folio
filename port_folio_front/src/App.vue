@@ -6,12 +6,8 @@ import HomeView from './views/HomeView.vue';
 <template>
  
   
-  <!-- </header>
-  <VideoComponent></VideoComponent> -->
-  <!-- <ProjetDétailsCompenent/> -->
-
-<HomeView></HomeView>
   
+ 
   
 
   <RouterView />
