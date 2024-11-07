@@ -108,7 +108,7 @@
       <!-- Social Media Icons -->
         <!-- Social Media Icons -->
    <section class="mt-8 flex justify-center space-x-4">
-    <a href="/home">
+    <a href="#">
      <i class="fab fa-facebook text-3xl text-blue-600 hover:text-blue-800 transition duration-300">
      </i>
     </a>
@@ -138,10 +138,10 @@
 
     <!-- Sidebar Navigation -->
     <aside class="fixed left-0 top-1/4 flex flex-col space-y-4 p-4 bg-gray-200 rounded-r-lg">
-      <a class="sidebar-button" href="/home">
+      <a class="sidebar-button" href="/">
         <i class="fas fa-home"></i>
       </a>
-      <a class="sidebar-button" href="#">
+      <a class="sidebar-button" href="/about">
         <i class="fas fa-info"></i>
       </a>
       <a class="sidebar-button" href="#">
