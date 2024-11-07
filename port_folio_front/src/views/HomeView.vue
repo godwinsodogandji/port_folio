@@ -15,14 +15,17 @@
         Bonjour
         <span class="wave">👋</span>,
       </h1>
-      <h2 class="text-3xl font-bold text-black mt-2 text-left">Je suis Developpeur web  Full Stack</h2>
-      <h3 class="text-4xl font-bold gradient-text-orange mt-2">Develope....</h3>
+      <h2 class="text-3xl font-bold text-black mt-2 text-left">Je suis {{ userName }}</h2>
+      <h3 class="text-4xl font-bold gradient-text-blue mt-2">Develope...</h3>
 
       <!-- Who Am I Section -->
       <section class="mt-8 w-3/4 text-center">
         <h4 class="text-2xl font-bold text-black text-left">Qui suis-je ?</h4>
         <p class="text-black mt-4 text-left">
-          It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum.
+          It is a long established fact that a reader will be distracted by the readable content of a page when looking
+          at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+          opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing
+          packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum.
         </p>
       </section>
 
@@ -32,8 +35,8 @@
       </section>
 
       <!-- Navigation Links -->
-      <section >
-        <div >
+      <section>
+        <div>
           <a class="text-left text-black text-xl font-bold mr-4" href="#">Sur moi</a>
           <i class="fas fa-arrow-right  text-black" style="padding-right: 700px;"></i>
           
@@ -69,19 +72,24 @@
 
     <!-- Sidebar Navigation -->
     <aside class="fixed left-0 top-1/4 flex flex-col space-y-4 p-4 bg-gray-200 rounded-r-lg">
-      <a class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-lg transition-transform transform hover:scale-110 active:scale-95 active:translate-x-2 hover:bg-blue-100" href="/home">
+      <a class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-lg transition-transform transform hover:scale-110 active:scale-95 active:translate-x-2 hover:bg-blue-100"
+        href="/home">
         <i class="fas fa-home text-blue-500 transition-colors duration-200 hover:text-blue-700"></i>
       </a>
-      <a class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-lg transition-transform transform hover:scale-110 active:scale-95 active:translate-x-2 hover:bg-blue-100" href="#">
+      <a class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-lg transition-transform transform hover:scale-110 active:scale-95 active:translate-x-2 hover:bg-blue-100"
+        href="/about">
         <i class="fas fa-info text-black transition-colors duration-200 hover:text-blue-700"></i>
       </a>
-      <a class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-lg transition-transform transform hover:scale-110 active:scale-95 active:translate-x-2 hover:bg-blue-100" href="#">
+      <a class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-lg transition-transform transform hover:scale-110 active:scale-95 active:translate-x-2 hover:bg-blue-100"
+        href="#">
         <i class="fas fa-code text-black transition-colors duration-200 hover:text-blue-700"></i>
       </a>
-      <a class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-lg transition-transform transform hover:scale-110 active:scale-95 active:translate-x-2 hover:bg-blue-100" href="/contact">
+      <a class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-lg transition-transform transform hover:scale-110 active:scale-95 active:translate-x-2 hover:bg-blue-100"
+        href="/contact">
         <i class="fas fa-user text-black transition-colors duration-200 hover:text-blue-700"></i>
       </a>
-      <a class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-lg transition-transform transform hover:scale-110 active:scale-95 active:translate-x-2 hover:bg-blue-100" href="#">
+      <a class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-lg transition-transform transform hover:scale-110 active:scale-95 active:translate-x-2 hover:bg-blue-100"
+        href="/videos">
         <i class="fas fa-video text-black transition-colors duration-200 hover:text-blue-700"></i>
       </a>
     </aside>
@@ -89,9 +97,72 @@
 </template>
 
 <script setup>
-// You can add any script logic here if needed.
+import { ref, onMounted } from 'vue';
+import axios from 'axios';
+
+const userName = ref(''); // Variable pour stocker le nom de l'utilisateur
+
+const fetchUserName = async () => {
+  try {
+    const response = await axios.get('http://localhost:5000/api/users');
+
+    // Vérifie si la réponse contient des utilisateurs
+    if (response.data.length > 0) {
+      userName.value = response.data[0].name;
+      console.log("Nom de l'utilisateur récupéré :", userName.value);
+    } else {
+      console.error("Aucun utilisateur trouvé.");
+    }
+  } catch (error) {
+    console.error("Erreur lors de la récupération de l'utilisateur :", error);
+  }
+};
+
+// Appel de la fonction lors du montage du composant
+onMounted(fetchUserName);
 </script>
 
 <style scoped>
+.gradient-text {
+  background: linear-gradient(to right, #ff6b6b, #ffa500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
+.gradient-text-orange {
+  background: linear-gradient(to right, #ffa500, #ff6b6b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.wave {
+  display: inline-block;
+  animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(20deg);
+  }
+
+  40% {
+    transform: rotate(0deg);
+  }
+
+  60% {
+    transform: rotate(-20deg);
+  }
+
+  80% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
 </style>
