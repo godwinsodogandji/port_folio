@@ -15,7 +15,7 @@ const router = createRouter({
     {
       path: '/videos',
       name: 'videos',
-      component: () => import('../components/VideoComponent.vueJ')
+      component: () => import('../components/VideoComponent.vue')
     },
     {
       path: '/contact',
@@ -26,6 +26,11 @@ const router = createRouter({
       path: '/qualification',
       name: 'qualification',
       component: () => import('../components/Qualification.vue')
+    },
+    {
+      path: '/projets',
+      name: 'projets',
+      component: () => import('../components/Projets.vue')
     },
 
 

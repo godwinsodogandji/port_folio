@@ -144,7 +144,7 @@
       <a class="sidebar-button" href="/about">
         <i class="fas fa-info"></i>
       </a>
-      <a class="sidebar-button" href="#">
+      <a class="sidebar-button" href="/projets">
         <i class="fas fa-code"></i>
       </a>
       <a class="sidebar-button" href="/contact">
