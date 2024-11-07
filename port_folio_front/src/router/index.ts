@@ -10,13 +10,9 @@ const router = createRouter({
     {
       path: '/videos',
       name: 'videos',
-      component: () => import('../components/VideoComponent.vue')
+      component: () => import('../components/VideoComponent.vueJ')
     },
-    {
-      path: '/projets',
-      name: 'projets',
-      component: () => import('../components/Projets.vue')
-    }
+   
 
 
 
