@@ -15,7 +15,7 @@ const router = createRouter({
     {
       path: '/videos',
       name: 'videos',
-      component: () => import('../components/VideoComponent.vue')
+      component: () => import('../components/VideoComponent.vueJ')
     },
     {
       path: '/contact',

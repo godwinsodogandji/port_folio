@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const cors = require("cors"); // Importer le middleware CORS
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 4000;
 
 // Connexion à MongoDB
 const mongoDBURI = "mongodb://localhost:27017/port_folio";
