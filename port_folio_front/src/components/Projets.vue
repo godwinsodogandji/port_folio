@@ -1,120 +1,74 @@
 <template>
-    <section class="bg-no-repeat bg-cover bg-center bg-[url('/src/assets/img/background2.png')] min-h-screen">
-        <div class="container mx-auto p-2">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 mt-10">
-                <div v-for="projet in projets" :key="projet._id"
-                    class="max-w-xs bg-[#F9FAFB] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                    <a href="#">
-                        <img class="rounded-t-lg" src="" alt="image" />
-                    </a>
-                    <div class="p-4">
-                        <a href="#">
-                            <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-                                {{ projet.titre }}
-                            </h5>
-                        </a>
-                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                            {{ projet.description }}
-                        </p>
-                        <button href="#" @click="showDetails(projet)"
-                            class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#6875F5] rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            Read more
-                            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                            </svg>
-                        </button>
-                        <div v-if="selectedProjet"
-                            class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center">
-                            <div class="bg-white rounded-lg p-8 max-w-md">
-                                <h3 class="text-xl font-bold mb-4">{{ selectedProjet.titre }}</h3>
-                                <p class="mb-2"><strong>Description:</strong> {{ selectedProjet.description }}</p>
-                                <p class="mb-2"><strong>Technologies:</strong> {{ selectedProjet.technologies.join(', ')
-                                    }}</p>
-                                <p class="mb-2"><strong>Lien:</strong> <a :href="selectedProjet.lien"
-                                        class="text-blue-700 underline">{{ selectedProjet.lien }}</a></p>
-                                <p class="mb-2"><strong>Date:</strong> {{ new
-                                    Date(selectedProjet.date).toLocaleDateString() }}</p>
-                                <p class="mb-2"><strong>Version:</strong> {{ (selectedProjet.__v) }}</p>
-                                <button @click="selectedProjet = null"
-                                    class="mt-4 bg-red-500 text-white px-4 py-2 rounded">Fermer</button>
-                                <div
-                                    class="mt-2 border-t-2 border-neutral-100 px-6 py-3 text-center text-surface/75 dark:border-white/10 dark:text-neutral-300">
-                                    <small>Dernière mise à jour il y a 3 minutes</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div class="bg-gray-100 min-h-screen p-6 bg-center bg-[url('/src/assets/img/background.png')]">
+    <h1 class="text-3xl text-center font-bold mb-20"> Projet</h1>
 
-            <!-- Pagination -->
-            <div class="flex justify-center mt-6">
-                <nav aria-label="Page navigation example">
-                    <ul class="inline-flex items-center -space-x-px">
-                        <li>
-                            <a href="#"
-                                class="px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-                                Previous
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-                                1
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-                                2
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-                                3
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
-                                Next
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div
+        v-for="(projets, index) in projectprojetss"
+        :key="projets._id"
+        class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+      >
+        <!-- Image de la projets -->
+        <img :src="projets.image" alt="Image " class="w-full h-48 object-cover">
+
+        <div class="p-4">
+          <h2 class="text-xl font-semibold mb-2">{{ projets.titre }}</h2>
+          <p class="text-gray-600 mb-4">
+            <span v-if="isTruncated(projets.description) && !projets.showFullDescription">
+              {{ truncatedDescription(projets.description) }}
+              <a href="#" @click.prevent="toggleShowMore(index)" class="text-blue-600">Voir plus</a>
+            </span>
+            <span v-else>
+              {{ projets.description }}
+              <a href="#" @click.prevent="toggleShowMore(index)" class="text-blue-600">Voir moins</a>
+            </span>
+          </p>
+          <!-- Lien externe vers la projets -->
+          <button class="text-white bg-blue-500 hover:bg-blue-700 rounded-lg px-4 py-2 inline-block">
+            <a href="/projets_details"  >
+            Voir le projet
+          </a>
+          </button>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
-
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
-const selectedProjet = ref(null);
-const projets = ref([]);
 
-const fetchProjets = async () => {
-    try {
-        const response = await axios.get('http://localhost:5000/api/projets');
-        projets.value = response.data;
-    } catch (error) {
-        console.error("Erreur lors de la récupération des projets:", error);
-    }
+const projectprojetss = ref([]);
+
+const fetchProjects = async () => {
+  try {
+    const response = await axios.get('http://localhost:5000/api/projets'); // URL de votre API
+    projectprojetss.value = response.data; // Assurez-vous que la structure des données correspond
+  } catch (error) {
+    console.error("Erreur lors de la récupération des projets: ", error);
+  }
 };
 
-const showDetails = (projet) => {
-    selectedProjet.value = projet;
+const maxLength = 100;
+const isTruncated = (description) => description.length > maxLength;
+const truncatedDescription = (description) => description.slice(0, maxLength) + '...';
+
+const toggleShowMore = (index) => {
+  const projets = projectprojetss.value[index];
+  projets.showFullDescription = !projets.showFullDescription;
 };
 
-onMounted(fetchProjets);
+// Appeler la fonction pour récupérer les projets lorsque le composant est monté
+onMounted(fetchProjects);
 </script>
 
 <style scoped>
-.container {
-    max-width: 1200px;
+.card-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 </style>
