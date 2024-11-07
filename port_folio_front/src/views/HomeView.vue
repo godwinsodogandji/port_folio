@@ -3,7 +3,7 @@
     <!-- Header -->
     <header class="w-full flex justify-end p-5">
       <nav>
-        <a class="text-black text-4xl font-bold underline" href="/">
+        <a class="text-black text-4xl font-bold underline translate-x-6 " href="/">
           Home
         </a>
       </nav>
@@ -28,14 +28,15 @@
 
       <!-- Profile Image Section -->
       <section class="mt-9 ">
-        <img alt="" class="rounded-full" height="50" src="../assets/img/img_contact.png" width="150" />
+        <!-- <img alt="" class="rounded-full" height="50" src="../assets/img/img_contact.png" width="150" /> -->
       </section>
 
       <!-- Navigation Links -->
       <section >
         <div >
           <a class="text-left text-black text-xl font-bold mr-4" href="#">Sur moi</a>
-          <i class="fas fa-arrow-right text-black"></i>
+          <i class="fas fa-arrow-right  text-black" style="padding-right: 700px;"></i>
+          
         </div>
         <div class="flex items-center mt-4">
           <a class="text-black text-xl font-bold mr-4" href="#">Project</a>
@@ -43,7 +44,7 @@
         </div>
         <div class="flex items-center mt-4">
           <a class="text-black text-xl font-bold mr-4" href="#">Langages</a>
-          <i class="fas fa-arrow-down text-black"></i>
+          <i class="fas fa-arrow-down text-black" ></i>
         </div>
       </section>
 
@@ -51,7 +52,7 @@
       <section class="mt-8 flex flex-col items-center">
         <div class="flex items-center mt-4">
           <a class="text-black text-xl font-bold mr-4" href="/contact">Contact Me</a>
-          <i class="fas fa-arrow-right text-black"></i>
+          <i class="fas fa-arrow-right  text-black" ></i>
         </div>
       </section>
 
