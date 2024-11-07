@@ -76,7 +76,7 @@
         <i class="fas fa-home text-blue-500 transition-colors duration-200 hover:text-blue-700"></i>
       </a>
       <a class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-lg transition-transform transform hover:scale-110 active:scale-95 active:translate-x-2 hover:bg-blue-100"
-        href="#">
+        href="/about">
         <i class="fas fa-info text-black transition-colors duration-200 hover:text-blue-700"></i>
       </a>
       <a class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-lg transition-transform transform hover:scale-110 active:scale-95 active:translate-x-2 hover:bg-blue-100"
