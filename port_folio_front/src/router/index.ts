@@ -1,20 +1,36 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../views/Apropos.vue';
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/apropos',
-      name: 'Apropos',
-      component: Apropos
-    },
-    
-    {
       path: '/',
-      name: 'HelloWorld',
-      component: () => import('../components/HelloWorld.vue') 
+      name: 'home',
+      component: () => import('../views/HomeView.vue')
     },
-    
+    {
+      path: '/about',
+      name: 'about',
+      component: () => import('../views/AboutView.vue')
+    },
+    {
+      path: '/videos',
+      name: 'videos',
+      component: () => import('../components/VideoComponent.vue')
+    },
+    {
+      path: '/contact',
+      name: 'contact_me',
+      component: () => import('../views/ContactMeView.vue')
+    },
+    {
+      path: '/qualification',
+      name: 'qualification',
+      component: () => import('../components/Qualification.vue')
+    },
+
+
+
+
   ],
 })
 
