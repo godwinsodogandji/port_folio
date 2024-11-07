@@ -1,12 +1,12 @@
 <script setup lang="ts">
 // import { RouterLink, RouterView } from 'vue-router'
-import AproposVue from "./components/Apropos.vue";
+// import AproposVue from "./components/Apropos.vue";
 
 </script>
 
 <template>
  
-<!-- <apropos/> -->
+<apropos/>
   <RouterView />
 </template>
 

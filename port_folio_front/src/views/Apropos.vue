@@ -1,37 +1,41 @@
 <template>
     <div class="container">
+<!-- <div  id="abh1">
+  <h1>About Me</h1>
+</div> -->
       <div class="main-content">
-       
-        <div class="profile-section">
-          <img src="" alt="Profile Image" class="profile-image" />
-          <h1 class="name">Jus Hope</h1>
-          <p class="title">Developer</p>
-        </div>
-
+          
+  
         <div class="about-me">
-          <h4>About Me</h4>
+            <div class="">
+          <img src="../assets/images/calendar.png" alt="Profile Image" class="profile-image" />
+          <h1 class="text-center">Jus Hope</h1>
+          <p class="dvlp">Developer</p>
+        </div>
+        <div class="text">
+          <h4 class="text-center mt-12"><strong>About Me</strong></h4>
           <p>
             Il est bien connu que le lecteur sera distrait par le contenu lisible
-            d'une page lorsqu'il examinera sa mise en page. L'intérêt d'utiliser
+         d'une page lorsqu'il examinera sa mise en page. L'intérêt d'utiliser
             le Lorem Ipsum est qu'il présente une distribution de lettres plus ou
-            moins normale, contrairement à l'utilisation de « Contenu ici,
+         moins normale, contrairement à l'utilisation de « Contenu ici,
             contenu ici ».
           </p>
-          <h3>Contact</h3>
-          <p><strong>Phone:</strong> +06 14 52 78 41 10</p>
-          <p><strong>Adresse:</strong> 412 Akpakpa, Cotonou Bénin</p>
-          <p><strong>Email:</strong> Hope123.jus@gmail.com<br>hopejus1234@outlook.fr</p>
+          <h4 class="text-center"><strong>Contact</strong></h4>
+          <p class="text-center"><strong>Phone:</strong><br> +06 14 52 78 41 10</p>
+          <p class="text-center"><strong>Adresse:</strong><br> 412 Akpakpa, Cotonou Bénin</p>
+          <p class="text-center"><strong>Email:</strong><br> Hope123.jus@gmail.com<br>hopejus1234@outlook.fr</p>
         </div>
-  
+    </div>
         <!-- Right Side Section -->
         <div class="right">
-          <div class="info-section">
-            <h3>Education</h3>
+          <div id="educ" class="info-section">
+            <h3  >Education</h3>
           </div>
-          <div class="info-section">
+          <div  id="exper" class="info-section">
             <h3>Experiences</h3>
           </div>
-          <div class="info-section">
+          <div id="skill" class="info-section">
             <h3>Skill</h3>
           </div>
         </div>
@@ -52,6 +56,7 @@
     height: 1000px;
     width: 2500px;
     background: linear-gradient(to right, #c2dff7, #e3d7f7);
+    padding-top:50px;
   }
   
   /* Sidebar */
@@ -86,17 +91,19 @@
   }
   
   .profile-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+margin-left: 215px ;
+margin-bottom: 30px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
     border: 5px solid #b3c7f5;
-    margin-bottom: 15px;
   }
   
   .name {
     font-size: 28px;
     color: white;
     margin: 0;
+  
   }
   
   .title {
@@ -110,6 +117,8 @@
     flex: 1;
     padding: 20px;
     color: #333;
+    margin-top: 10px;
+    margin-bottom: 0;
   }
   
   .about-me h2 {
@@ -123,13 +132,18 @@
     font-weight: bold;
   }
   
-  /* Right Side Section */
+  /* coté droit */
   .right{
     flex: 1;
     padding: 20px;
-    border-left: 2px solid #000;
+    padding-top: 30px;
+    padding-left: 0px;
+    border-left: 6px solid #000;
+    height: 100%;
     width: 100px;
     margin-right: 80;
+    margin-bottom: 300px;
+
   }
   
   .section-title {
@@ -143,13 +157,36 @@
   .info-section {
     margin-top: 30px;
   }
+  #educ {
+    margin-top: 0px;
+  }
+  #skill {
+    margin-top: 270px;
+  }
+  #exper {
+    margin-top:270px;
+  }
+  .photoprofil {
+margin-top: 5px;
+margin-bottom: 100px;
+margin-left: 250px;
+
+  }
   
   .info-section h3 {
-    font-size: 15px;
+    font-size: 18px;
+    text-align: center;
     font-weight: bold;
     background-color: rgba(255, 255, 255, 0.6);
     padding: 15px;
     border-radius: 5px;
+  }
+  .dvlp{
+    margin-bottom: 100px;
+    margin-top: 20px;
+text-align: center;
+    font-size: 28px;
+    font-weight: bold;
   }
   </style>
 
