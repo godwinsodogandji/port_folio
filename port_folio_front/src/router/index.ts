@@ -22,6 +22,11 @@ const router = createRouter({
       name: 'contact_me',
       component: () => import('../views/ContactMeView.vue')
     },
+    {
+      path: '/qualification',
+      name: 'qualification',
+      component: () => import('../components/Qualification.vue')
+    },
 
 
 

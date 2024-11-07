@@ -11,7 +11,7 @@
           <span class="wave">👋</span>
         </h1>
         <h2 class="text-3xl font-bold text-black mt-2 text-left">
-          Je suis <span class="animated-text">{{ displayedJobTitle }}</span>
+          Je suis <span class="animated-text">{{ userName }}</span>
         </h2>
 
         <p class="text-lg text-gray-600 text-left">
@@ -108,7 +108,7 @@
       <!-- Social Media Icons -->
         <!-- Social Media Icons -->
    <section class="mt-8 flex justify-center space-x-4">
-    <a href="#">
+    <a href="/home">
      <i class="fab fa-facebook text-3xl text-blue-600 hover:text-blue-800 transition duration-300">
      </i>
     </a>
@@ -124,11 +124,11 @@
      <i class="fas fa-envelope text-3xl text-blue-600 hover:text-blue-800 transition duration-300">
      </i>
     </a>
-    <a href="#">
+    <a href="/contact">
      <i class="fas fa-phone text-3xl text-blue-600 hover:text-blue-800 transition duration-300">
      </i>
     </a>
-    <a href="#">
+    <a href="/videos">
      <i class="fab fa-youtube text-3xl text-blue-600 hover:text-blue-800 transition duration-300">
      </i>
     </a>
