@@ -26,11 +26,7 @@
           </div>
   
           <!-- CV Download Button -->
-          <div class="flex justify-end md:ml-4 space-x-3">
-            <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-              Télécharger mon CV ici !
-            </button>
-          </div>
+          
   
           <!-- Mobile Menu Toggle Button -->
           <button data-collapse-toggle="navbar" type="button" class="md:hidden p-2 text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400" aria-controls="navbar" aria-expanded="false">

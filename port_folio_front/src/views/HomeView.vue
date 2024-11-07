@@ -1,31 +1,33 @@
 <template>
-  <div class="bg-gradient-to-r from-purple-100 via-blue-300 to-teal-50 min-h-screen flex flex-col items-center">
-    <!-- Header -->
-    <hearderComponent></hearderComponent>
-
+  <div class="bg-gradient-to-r from-purple-100 via-blue-300 to-teal-50 min-h-screen flex flex-col items-center relative">
+    <div class="absolute top-4 right-4">
+        <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Télécharger mon CV ici !
+        </button>
+    </div>
     <!-- Main Content -->
     <main class="mt-8 w-3/4 text-center flex flex-col items-center">
       <div class="text-animation-container w-full">
         <h1 class="text-4xl font-bold gradient-text ml-12 text-left">
-          <span>Hello,</span>
-          <span class="wave">👋</span>
+          <span>Bonjour,</span>
+          <span class="wave"><i class="fas fa-hand-wave"></i></span>
         </h1>
         <h2 class="text-3xl font-bold text-black mt-2 text-left">
-          Je suis <span class="animated-text">{{ userName }}</span>
+          Je suis ... <span class="animated-text">{{ userName }}</span>
         </h2>
 
         <p class="text-lg text-gray-600 text-left">
-          Top rated digital marketing analyst in America
+          Analyste de marketing numérique le mieux noté en Amérique
         </p>
         <div class="flex items-center space-x-4 mt-4 text-left">
           <span class="text-blue-600">
-            <i class="fas fa-check-circle"></i> Trusted
+            <i class="fas fa-check-circle"></i> Confiance
           </span>
           <span class="text-blue-600">
-            <i class="fas fa-check-circle"></i> Result Oriented
+            <i class="fas fa-check-circle"></i> Professionnalisme
           </span>
           <span class="text-blue-600">
-            <i class="fas fa-check-circle"></i> Next Level Expert
+            <i class="fas fa-check-circle"></i> Expert de niveau supérieur
           </span>
         </div>
       
@@ -34,7 +36,7 @@
  <section class="mt-9 flex justify-between w-full">
   <div class="w-1/2 pr-8">
     <section class="mt-8 w-3/4 text-center">
-      <h4 class="text-2xl font-bold text-black text-left">Qui suis-je ?</h4>
+      <h4 class="text-2xl font-bold text-black">Qui suis-je ?</h4>
       <p class="text-black mt-4 text-left">
         It is a long established fact that a reader will be distracted by the readable content of a page when looking
         at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
@@ -43,7 +45,7 @@
       </p>
     </section>
   </div>
-  <div class="w-1/2">
+  <div class="w-1/2 ml-12 pl-10 ">
     <img
       src="https://storage.googleapis.com/a1aa/image/b7pfBfcrDkqmr0bERAsPYgNbPEQ4fWP5gEiegcj0rdbEEL6OB.jpg"
       alt="3D illustration of a person with glasses and an orange shirt"
@@ -52,43 +54,34 @@
       height="400"
     />
   </div>
-
- 
 </section>
     
-<div class="mt-8 space-x-4 text-right">
-  <button class="bg-blue-600 text-white px-6 py-2 rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
+<div class="mt-8 space-x-9 text-right pr-7">
+  <router-link to="/about" class="bg-blue-600 text-white px-8 py-2 rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
     Hire me
-  </button>
-  <button class="border border-blue-600 text-blue-600 px-6 py-2 rounded-full shadow-lg hover:bg-blue-100 transition duration-300">
+</router-link>
+<router-link to="/projet" class="border border-blue-600 text-blue-600 px-6 py-2 rounded-full shadow-lg hover:bg-blue-100 transition duration-300">
     See My Works
-  </button>
+</router-link>
 </div>
       </div>
-
-      <!-- Profile Image Section -->
-      <!-- <section class="mt-9">
-        <img alt="" class="rounded-full" height="150" src="../assets/img/img_contact.png" width="150" />
-      </section> -->
-
-      <!-- Navigation Links -->
      <!-- Navigation Links -->
-   <section class="mt-8 w-full text-left">
-    <div class="flex items-center mt-4">
-     <a class="text-black text-xl font-bold mr-4 hover:text-blue-600 transition duration-300" href="#">
+   <section class="mt-5 w-full text-left">
+    <div class="flex items-center mt-1">
+     <a class="text-black text-xl font-bold ml-12 hover:text-blue-600 transition duration-300" href="/about">
       Sur moi
      </a>
-     <i class="fas fa-arrow-right text-black">
+     <i class="fas fa-arrow-right ml-3 text-black">
      </i>
     </div>
-    <div class="flex items-center mt-4">
-     <a class="text-black text-xl font-bold mr-4 hover:text-blue-600 transition duration-300" href="#">
+    <div class="flex items-center mt-11">
+     <a class="text-black text-xl font-bold ml-6 hover:text-blue-600 transition duration-300" href="/projets">
       Project
      </a>
-     <i class="fas fa-arrow-right text-black">
+     <i class="fas fa-arrow-right ml-2 text-black">
      </i>
     </div>
-    <div class="flex items-center mt-4">
+    <div class="flex items-center mt-9">
      <a class="text-black text-xl font-bold mr-4 hover:text-blue-600 transition duration-300" href="#">
       Langages
      </a>
@@ -108,7 +101,7 @@
       <!-- Social Media Icons -->
         <!-- Social Media Icons -->
    <section class="mt-8 flex justify-center space-x-4">
-    <a href="/home">
+    <a href="/">
      <i class="fab fa-facebook text-3xl text-blue-600 hover:text-blue-800 transition duration-300">
      </i>
     </a>
@@ -141,10 +134,10 @@
       <a class="sidebar-button" href="/home">
         <i class="fas fa-home"></i>
       </a>
-      <a class="sidebar-button" href="#">
+      <a class="sidebar-button" href="/about">
         <i class="fas fa-info"></i>
       </a>
-      <a class="sidebar-button" href="#">
+      <a class="sidebar-button" href="/projets">
         <i class="fas fa-code"></i>
       </a>
       <a class="sidebar-button" href="/contact">
