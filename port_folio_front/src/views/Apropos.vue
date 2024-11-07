@@ -1,15 +1,15 @@
 <template>
     <div class="container">
-<!-- <div  id="abh1">
+<div  id="abh1">
   <h1>About Me</h1>
-</div> -->
+</div>
       <div class="main-content">
           
   
         <div class="about-me">
             <div class="">
           <img src="../assets/images/calendar.png" alt="Profile Image" class="profile-image" />
-          <h1 class="text-center">Jus Hope</h1>
+          <h1 class="text-center">Deby </h1>
           <p class="dvlp">Developer</p>
         </div>
         <div class="text">
@@ -22,9 +22,9 @@
             contenu ici ».
           </p>
           <h4 class="text-center"><strong>Contact</strong></h4>
-          <p class="text-center"><strong>Phone:</strong><br> +06 14 52 78 41 10</p>
-          <p class="text-center"><strong>Adresse:</strong><br> 412 Akpakpa, Cotonou Bénin</p>
-          <p class="text-center"><strong>Email:</strong><br> Hope123.jus@gmail.com<br>hopejus1234@outlook.fr</p>
+          <p class="text-center"><strong>Phone</strong><br> +06 14 52 78 41 10</p>
+          <p class="text-center"><strong>Adresse</strong><br> 412 Akpakpa, Cotonou Bénin</p>
+          <p class="text-center"><strong>Email</strong><br> deby123.jus@gmail.com<br>deby1234@outlook.fr</p>
         </div>
     </div>
         <!-- Right Side Section -->
