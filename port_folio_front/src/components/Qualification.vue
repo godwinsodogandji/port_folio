@@ -17,8 +17,7 @@
                 </div>
             </div>
             <div class="mb-6">
-                <button
-                    class="bg-green-500 text-white px-32 py-3 rounded-lg flex items-center justify-center mx-auto">
+                <button class="bg-green-500 text-white px-32 py-3 rounded-lg flex items-center justify-center mx-auto">
                     <span>Passed</span>
                     <i class="fas fa-check ml-2"></i>
                 </button>
